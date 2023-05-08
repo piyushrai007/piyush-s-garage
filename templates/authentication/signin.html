@@ -1,0 +1,230 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sign-in</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="{% static 'source/bootstrap-3.3.6-dist/css/bootstrap.css'%}">
+	      <link rel="stylesheet" type="text/css" href="{% static 'source/font-awesome-4.5.0/css/font-awesome.css'%}">
+	      <link rel="stylesheet" type="text/css" href="{% static 'style/slider.css'%}">
+	      <link rel="stylesheet" type="text/css" href="{% static 'style/mystyle.css'%}">
+        <style>
+          /* Custom CSS for the header */
+    body {
+      background-color: #808080;
+    }
+    footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px 0;
+    }
+    h2{
+      text-align: center;
+    }
+    footer h3 {
+      color: #fff;
+    }
+    
+    footer p {
+      color: #ccc;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    footer ul li {
+      margin-bottom: 10px;
+    }
+    
+    footer ul li i {
+      margin-right: 10px;
+    }
+    
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .social-icons li a {
+      color: #fff;
+    }
+    
+    .social-icons li a:hover {
+      color: #ccc;
+    }
+    
+    .signup-form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #898989;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #ccc;
+    }
+
+    .signup-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .errorlist {
+      color: red;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .errorlist li {
+      margin-bottom: 5px;
+    }
+
+    .header {
+      /* Your header styles here */
+    }
+
+    /* Add your additional CSS styles */
+       
+      </style>
+    </head>
+    <body>
+        <div class="allcontain">                    
+            <div class="header">
+                    <ul class="socialicon">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                    <ul class="givusacall">
+                        <li>Give us a call : +91 9691529465 </li>
+                        <h3>please login for services<h3>
+                       
+                        
+        
+                    </ul>
+                    <ul class="logreg">
+                        <li><a href="/signup">SIGN-UP </a> </li>
+                        <li><a href="/signin"><span class="register">LOG-IN</span></a></li>
+                    </ul>
+                
+        
+            </div>
+            <nav class="topnavbar navbar-default topnav">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand logo" href="/"><img src="{% static 'image/pg (1).png' %}" alt="logo"></a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse" id="upmenu">
+                <ul class="nav navbar-nav" id="navbarontop">
+                  <!-- Add your menu items here -->
+                  <!-- Example: -->
+                  <!-- <li><a href="#">Menu Item</a></li> -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+         
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true"> &times;</span>
+        </button>
+        </div>
+        {% endfor %}
+        <div class="container">
+          <div class="form-container">
+              <h2>Login</h2>
+              <form action="/signin" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="username">Enter your username and password</label>
+                      <input type="text" id="username" placeholder="Username" name="username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" placeholder="Password" id="password" name="password" required>
+                  </div>
+                  <div class="form-group">
+                      <button type="submit">Sign in</button>
+                  </div>
+              </form>
+              <div class="signup-link">
+                  Don't have an account? <a href="/signup">Sign up</a>
+              </div>
+          </div>
+      </div>
+              
+              
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam ante vel lectus rhoncus, non tempus leo suscipit. Nunc tincidunt lacinia erat, vitae accumsan mi tempor eget.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fa fa-map-marker"></i> 123 Street, City, Country</li>
+            <li><i class="fa fa-envelope"></i> info@example.com</li>
+            <li><i class="fa fa-phone"></i> +1234567890</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+              
+              
+              
+              
+              
+              
+        <script src="" async defer></script>
+    </body>
+</html>
