@@ -25,7 +25,7 @@ To install and run this project, follow these steps:
 
 ## Screenshots
 
-<img src="/images/Screenshot (119).png">
+<img src="static/Screenshot (194).png">
 *Home Page with car advertisements.*
 
 ![Registration](static/Screenshot (195).png)
