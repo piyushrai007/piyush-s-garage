@@ -54,7 +54,7 @@ Click the image below to watch a video demonstration of the website:
 
 ## Hosted Link
 
-The website is hosted and can be accessed at [https://www.example.com](http://piyushgarage.pythonanywhere.com/).
+The website is hosted and can be accessed at (http://piyushgarage.pythonanywhere.com/).
 
 Hope you like it!
 
