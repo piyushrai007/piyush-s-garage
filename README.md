@@ -25,25 +25,25 @@ To install and run this project, follow these steps:
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
+![Home Page](static/Screenshot (194).png)
 *Home Page with car advertisements.*
 
-![Registration](screenshots/registration.png)
+![Registration](static/Screenshot (195).png)
 *User Registration page with form validation.*
 
-![Login](screenshots/login.png)
+![Login](static/Screenshot (196).png)
 *Login page with email verification message.*
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](static/Screenshot (198).png)
 *Dashboard after successful login, displaying welcome message and user profile section.*
 
-![Service Booking](screenshots/booking.png)
+![Service Booking](static/Screenshot (199).png)
 *Service Booking section with scroll to appointment.*
 
-![Confirmation](screenshots/confirmation.png)
+![Confirmation](static/Screenshot (200).png)
 *Confirmation page after successful service booking.*
 
-![Logout](screenshots/logout.png)
+![Logout](static/Screenshot (194).png)
 *Logout button on the website.*
 
 ## Video Demonstration
