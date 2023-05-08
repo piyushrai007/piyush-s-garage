@@ -50,12 +50,12 @@ To install and run this project, follow these steps:
 
 Click the image below to watch a video demonstration of the website:
 
-[![Video Demonstration](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[![Video Demonstration]<iframe width="560" height="315" src="https://www.youtube.com/embed/idECCMCUG4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Replace `VIDEO_ID` in the image URL and YouTube link with the actual video ID of your demonstration video.
 
 ## Hosted Link
 
-The website is hosted and can be accessed at [https://www.example.com](https://www.example.com).
+The website is hosted and can be accessed at [https://www.example.com](http://piyushgarage.pythonanywhere.com/).
 
 Hope you like it!
